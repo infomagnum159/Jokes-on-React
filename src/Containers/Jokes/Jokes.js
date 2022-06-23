@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-
+import Joke from "../../Components/Joke/Joke";
 
 
 const url = 'https://api.chucknorris.io/jokes/random';
@@ -20,8 +20,10 @@ const Jokes = () => {
 
     return (
         <>
-            {anecdotes.id}
-            {anecdotes.value}
+            <Joke
+            key={anecdotes.id}
+            text={anecdotes.value}
+            />
 
         </>
     );
